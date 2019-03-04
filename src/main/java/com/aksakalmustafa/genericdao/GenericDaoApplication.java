@@ -37,8 +37,15 @@ public class GenericDaoApplication implements CommandLineRunner {
 		person.setName("Person");
 		personDao.save(person);
 
+		Person person2 = new Person();
+		person2.setDepartment(department);
+		person2.setName("Person2");
+		personDao.save(person2);
+
+		
 		System.out.println(departmentDao.findById(department.getId()));
 		System.out.println(personDao.findById(person.getId()));
+		System.out.println(personDao.findById(person2.getId()));
 
 	}
 
