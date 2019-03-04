@@ -29,12 +29,12 @@ public class GenericDaoApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 		Department department = new Department();
-		department.setName("department");
+		department.setName("Department");
 		departmentDao.save(department);
 
 		Person person = new Person();
 		person.setDepartment(department);
-		person.setName("Person1");
+		person.setName("Person");
 		personDao.save(person);
 
 		System.out.println(departmentDao.findById(department.getId()));
